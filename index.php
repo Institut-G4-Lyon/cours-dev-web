@@ -10,80 +10,23 @@
     <script src="http://localhost:1234/main.js"></script>
   </head>
   <body>
-  <?php require_once "./views/header.php" ?>
+  <?php require_once "./views/partials/header.php" ?>
 
+  <?php
+  $pathname = $_SERVER["REQUEST_URI"];
 
-    <section>
-      <h2>Titre de section</h2>
+  if($pathname === "/") {
+      require_once "./views/home.php";
+  } elseif ($pathname === "/search") {
+      require_once "./views/search.php";
+  } elseif ($pathname === "/about") {
+      require_once "./views/about.php";
+  }
+  else {
+      echo "page non trouvée";
+  }
+  ?>
 
-      <div class="List">
-        <div class="Card">
-          <h3 class="Card__Title Card__Title--Highlight">Card title</h3>
-          <p class="Card__Description">Card content</p>
-        </div>
-        <div class="Card">
-          <h3 class="Card__Title">Card title</h3>
-          <p class="Card__Description">Card content</p>
-        </div>
-        <div class="Card">
-          <h3 class="Card__Title">Card title</h3>
-          <p class="Card__Description">Card content</p>
-        </div>
-        <div class="Card">
-          <h3 class="Card__Title">Card title</h3>
-          <p class="Card__Description">Card content</p>
-        </div>
-        <div class="Card">
-          <h3 class="Card__Title">Card title</h3>
-          <p class="Card__Description">Card content</p>
-        </div>
-        <div class="Card">
-          <h3 class="Card__Title">Card title</h3>
-          <p class="Card__Description">Card content</p>
-        </div>
-        <div class="Card">
-          <h3 class="Card__Title">Card title</h3>
-          <p class="Card__Description">Card content</p>
-        </div>
-        <div class="Card">
-          <h3 class="Card__Title">Card title</h3>
-          <p class="Card__Description">Card content</p>
-        </div>
-        <div class="Card">
-          <h3 class="Card__Title">Card title</h3>
-          <p class="Card__Description">Card content</p>
-        </div>
-        <div class="Card">
-          <h3 class="Card__Title">Card title</h3>
-          <p class="Card__Description">Card content</p>
-        </div>
-        <div class="Card">
-          <h3 class="Card__Title">Card title</h3>
-          <p class="Card__Description">Card content</p>
-        </div>
-        <div class="Card">
-          <h3 class="Card__Title">Card title</h3>
-          <p class="Card__Description">Card content</p>
-        </div>
-        <div class="Card">
-          <h3 class="Card__Title">Card title</h3>
-          <p class="Card__Description">Card content</p>
-        </div>
-        <div class="Card">
-          <h3 class="Card__Title">Card title</h3>
-          <p class="Card__Description">Card content</p>
-        </div>
-        <div class="Card">
-          <h3 class="Card__Title">Card title</h3>
-          <p class="Card__Description">Card content</p>
-        </div>
-        <div class="Card">
-          <h3 class="Card__Title">Card title</h3>
-          <p class="Card__Description">Card content</p>
-        </div>
-      </div>
-    </section>
-
-    <?php require_once "./views/footer.php" ?>
+    <?php require_once "./views/partials/footer.php" ?>
   </body>
 </html>
