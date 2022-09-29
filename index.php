@@ -15,13 +15,15 @@
   <?php require_once "./views/partials/header.php" ?>
 
   <?php
-
   if($pathname === "/") {
       require_once "./views/home.php";
   } elseif ($pathname === "/search") {
       require_once "./views/search.php";
   } elseif ($pathname === "/about") {
       require_once "./views/about.php";
+  }
+  elseif ($pathname === "/articles") {
+      require_once "./views/articles.php";
   }
   else {
       echo "page non trouvée";
