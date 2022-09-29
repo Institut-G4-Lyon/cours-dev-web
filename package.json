@@ -1,7 +1,7 @@
 {
   "scripts": {
     "lint": "stylelint \"**/*.css\"",
-    "dev": "parcel ./assets/js/main.js --hmr-host localhost --hmr-port 5000",
+    "dev": "parcel ./assets/js/main.js --hmr-host 0.0.0.0 --hmr-port 5000",
     "full": "npm run lint && npm run dev"
   },
   "devDependencies": {
