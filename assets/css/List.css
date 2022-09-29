@@ -1,0 +1,10 @@
+.List {
+  display: flex;
+  overflow-x: scroll;
+}
+
+@media screen and (max-width: 600px) {
+  .List {
+    flex-wrap: wrap;
+  }
+}

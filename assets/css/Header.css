@@ -1,0 +1,19 @@
+.Header {
+  height: 200px;
+  background-color: aqua;
+  position: relative;
+}
+
+.Header__Title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Header__Actions {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
