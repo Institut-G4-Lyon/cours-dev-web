@@ -10,10 +10,11 @@
     <script src="http://localhost:1234/main.js"></script>
   </head>
   <body>
+  <?php $pathname = $_SERVER["PATH_INFO"] ?? "/" ?>
+
   <?php require_once "./views/partials/header.php" ?>
 
   <?php
-  $pathname = $_SERVER["REQUEST_URI"];
 
   if($pathname === "/") {
       require_once "./views/home.php";
