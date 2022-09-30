@@ -3,10 +3,17 @@
 namespace App\Controller;
 
 use App\Core\Controller;
+use App\Model\ArticleModel;
 
 class ArticleController extends Controller
 {
     public function index() {
-        $this->render('articles');
+        $articleModel = new ArticleModel();
+
+        $results = $articleModel->fetchAll();
+
+        $this->render('articles', [
+            "results" => $results
+        ]);
     }
 }
