@@ -21,18 +21,28 @@
       $homeController->index();
 
   } elseif ($pathname === "/search") {
-      require_once "./views/search.php";
+      require_once "./src/Controller/SearchController.php";
+      $controller = new SearchController();
+      $controller->index();
   } elseif ($pathname === "/about") {
-      require_once "./views/about.php";
+      require_once "./src/Controller/AboutController.php";
+      $controller = new AboutController();
+      $controller->index();
   }
   elseif ($pathname === "/articles") {
-      require_once "./views/articles.php";
+      require_once "./src/Controller/ArticleController.php";
+      $controller = new ArticleController();
+      $controller->index();
   }
   elseif ($pathname === "/login") {
-      require_once "./views/login.php";
+      require_once "./src/Controller/AuthController.php";
+      $controller = new AuthController();
+      $controller->login();
   }
   elseif ($pathname === "/admin") {
-      require_once "./views/admin.php";
+      require_once "./src/Controller/AdminController.php";
+      $controller = new AdminController();
+      $controller->index();
   }
   else {
       echo "page non trouvée";
