@@ -15,6 +15,9 @@
   <?php require_once "./views/partials/header.php" ?>
 
   <?php
+    require_once "./src/Controller/Controller.php";
+    $ctrl = new \App\Controlller\Controller();
+
   if($pathname === "/") {
       require_once "./src/Controller/HomeController.php";
       $homeController = new HomeController();
