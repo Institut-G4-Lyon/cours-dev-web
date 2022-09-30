@@ -25,6 +25,12 @@
   elseif ($pathname === "/articles") {
       require_once "./views/articles.php";
   }
+  elseif ($pathname === "/login") {
+      require_once "./views/login.php";
+  }
+  elseif ($pathname === "/admin") {
+      require_once "./views/admin.php";
+  }
   else {
       echo "page non trouvée";
   }
