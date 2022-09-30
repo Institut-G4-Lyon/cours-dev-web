@@ -16,7 +16,10 @@
 
   <?php
   if($pathname === "/") {
-      require_once "./views/home.php";
+      require_once "./src/Controller/HomeController.php";
+      $homeController = new HomeController();
+      $homeController->index();
+
   } elseif ($pathname === "/search") {
       require_once "./views/search.php";
   } elseif ($pathname === "/about") {
