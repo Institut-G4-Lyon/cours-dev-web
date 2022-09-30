@@ -1,8 +1,10 @@
 <?php
 
-class HomeController
+require_once __DIR__. "/../Core/Controller.php";
+
+class HomeController extends Controller
 {
     public function index() {
-        require_once __DIR__."/../../views/home.php";
+        $this->render("home");
     }
 }
