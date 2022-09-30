@@ -1,8 +1,10 @@
 <?php
 
-class AuthController
+namespace App\Controller;
+
+class AuthController extends \App\Core\Controller
 {
     public function login() {
-        require_once __DIR__."/../../views/login.php";
+        $this->render("login");
     }
 }

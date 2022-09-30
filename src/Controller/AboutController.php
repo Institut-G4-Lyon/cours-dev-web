@@ -1,8 +1,12 @@
 <?php
 
-class AboutController
+namespace App\Controller;
+
+use App\Core\Controller;
+
+class AboutController extends Controller
 {
     public function index() {
-        require_once __DIR__."/../../views/about.php";
+        $this->render("about");
     }
 }

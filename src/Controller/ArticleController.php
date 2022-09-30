@@ -1,8 +1,12 @@
 <?php
 
-class ArticleController
+namespace App\Controller;
+
+use App\Core\Controller;
+
+class ArticleController extends Controller
 {
     public function index() {
-        require_once __DIR__."/../../views/articles.php";
+        $this->render('articles');
     }
 }

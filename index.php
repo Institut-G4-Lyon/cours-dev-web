@@ -22,27 +22,22 @@
       $homeController->index();
 
   } elseif ($pathname === "/search") {
-      require_once "./src/Controller/SearchController.php";
-      $controller = new SearchController();
+      $controller = new \App\Controller\SearchController();
       $controller->index();
   } elseif ($pathname === "/about") {
-      require_once "./src/Controller/AboutController.php";
-      $controller = new AboutController();
+      $controller = new \App\Controller\AboutController();
       $controller->index();
   }
   elseif ($pathname === "/articles") {
-      require_once "./src/Controller/ArticleController.php";
-      $controller = new ArticleController();
+      $controller = new \App\Controller\ArticleController();
       $controller->index();
   }
   elseif ($pathname === "/login") {
-      require_once "./src/Controller/AuthController.php";
-      $controller = new AuthController();
+      $controller = new \App\Controller\AuthController();
       $controller->login();
   }
   elseif ($pathname === "/admin") {
-      require_once "./src/Controller/AdminController.php";
-      $controller = new AdminController();
+      $controller = new \App\Controller\AdminController();
       $controller->index();
   }
   else {

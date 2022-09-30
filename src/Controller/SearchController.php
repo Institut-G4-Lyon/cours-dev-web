@@ -1,8 +1,12 @@
 <?php
 
-class SearchController
+namespace App\Controller;
+
+use App\Core\Controller;
+
+class SearchController extends Controller
 {
     public function index() {
-        require_once __DIR__."/../../views/search.php";
+        $this->render("search");
     }
 }
