@@ -1,3 +1,5 @@
+<?php require_once "vendor/autoload.php"; ?>
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -15,12 +17,8 @@
   <?php require_once "./views/partials/header.php" ?>
 
   <?php
-    require_once "./src/Controller/Controller.php";
-    $ctrl = new \App\Controlller\Controller();
-
   if($pathname === "/") {
-      require_once "./src/Controller/HomeController.php";
-      $homeController = new HomeController();
+      $homeController = new \App\Controller\HomeController();
       $homeController->index();
 
   } elseif ($pathname === "/search") {

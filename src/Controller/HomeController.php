@@ -1,8 +1,10 @@
 <?php
 
-require_once __DIR__. "/../Core/Controller.php";
+namespace App\Controller;
 
-class HomeController extends \App\Core\Controller
+use \App\Core\Controller;
+
+class HomeController extends Controller
 {
     public function index() {
         $this->render("home");
